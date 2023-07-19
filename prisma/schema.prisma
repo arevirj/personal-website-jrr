@@ -7,32 +7,48 @@ generator client {
   provider = "prisma-client-js"
 }
 
-model User {
-  id    String @id @default(cuid())
-  email String @unique
+// Creating a model for different users to have portfolios on the site
+model Profile {
 
+  // Unique ID to avoid collision
+  id String @id @default(cuid())
+
+  // User name
+  name String
+
+  // User email
+  email String
+
+  // Time account was made
   createdAt DateTime @default(now())
+
+  // Time account was updated
   updatedAt DateTime @updatedAt
 
-  password Password?
-  notes    Note[]
+  // Aboutme section of portfolio
+  aboutme String
+
+  posts Post[]
 }
 
-model Password {
-  hash String
+// Create a model for individual Blog posts
+model Post{
+  postid String @id @default(cuid())
+  
+  author String
 
-  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
-  userId String @unique
-}
+  post String
 
-model Note {
-  id    String @id @default(cuid())
-  title String
-  body  String
-
+  // Time posted
   createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
 
-  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
-  userId String
+  // Time updated/edited
+  updatedAt DateTime @updatedAt
+  
+  //Likes, having the ability to like a blog post
+  likes Int
+
+  profile Profile @relation(fields: [profileid], references:[id])
+
+  profileid String
 }
