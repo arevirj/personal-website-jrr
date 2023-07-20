@@ -32,7 +32,7 @@ return(
     </div>
 
     <div className="mt-20 text-center border-b pb-12">
-        <h1 className="text-4xl font-medium text-gray-700">Justin Rivera, <span className="font-light text-gray-500">27</span></h1>
+        <h1 className="text-4xl font-medium text-gray-700">Justin Rivera, <span className="font-light text-gray-500">20</span></h1>
         <p className="font-light text-gray-600 mt-3">Chapel Hill, NC</p>
 
         <p className="mt-8 text-gray-500">Compupter Science/Statitics major</p>
@@ -50,6 +50,78 @@ return(
 
     </div>
     </div>
+    <div className="container my-24 mx-auto md:px-6">
+    <section className="mb-32">
+
+    <h2 className="mb-12 text-center text-3xl font-bold">
+      Projects
+    </h2>
+
+    <div className="grid gap-6 lg:grid-cols-3">
+      <div
+        className="zoom relative overflow-hidden rounded-lg bg-cover bg-no-repeat shadow-lg dark:shadow-black/20 bg-[50%]"
+        data-te-ripple-init data-te-ripple-color="dark">
+        <img src="https://prasannaseshadri.files.wordpress.com/2021/08/p517blog.png"
+          className="w-full align-middle transition duration-300 ease-linear" />
+        <a href="https://github.com/arevirj/a09-akari-arevirj">
+          <div
+            className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed bg-[hsla(0,0%,0%,0.3)]">
+            <div className="flex h-full items-end justify-start">
+              <h5 className="m-6 text-lg font-bold text-white">
+                Akari
+              </h5>
+            </div>
+          </div>
+          <div>
+            <div
+              className="mask absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100 bg-[hsla(0,0%,99.2%,0.15)]">
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div
+        className="zoom relative overflow-hidden rounded-lg bg-cover bg-no-repeat shadow-lg dark:shadow-black/20 bg-[50%]"
+        data-te-ripple-init data-te-ripple-color="dark">
+        <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.jpg"
+          className="w-full align-middle transition duration-300 ease-linear" />
+        <a href="#!">
+          <div
+            className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed bg-[hsla(0,0%,0%,0.3)]">
+            <div className="flex h-full items-end justify-start">
+              <h5 className="m-6 text-lg font-bold text-white">Genius Loci</h5>
+            </div>
+          </div>
+          <div>
+            <div
+              className="mask absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100 bg-[hsla(0,0%,99.2%,0.15)]">
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div
+        className="zoom relative overflow-hidden rounded-lg bg-cover bg-no-repeat shadow-lg dark:shadow-black/20 bg-[50%]"
+        data-te-ripple-init data-te-ripple-color="dark">
+        <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/045.jpg"
+          className="w-full align-middle transition duration-300 ease-linear" />
+        <a href="#!">
+          <div
+            className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed bg-[hsla(0,0%,0%,0.3)]">
+            <div className="flex h-full items-end justify-start">
+              <h5 className="m-6 text-lg font-bold text-white">Big Apple</h5>
+            </div>
+          </div>
+          <div>
+            <div
+              className="mask absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100 bg-[hsla(0,0%,99.2%,0.15)]">
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
     <footer className="text-center text-white bg-gradient-to-r from-indigo-600 to-pink-400" >
   <div className="container p-6">
     <div className="">

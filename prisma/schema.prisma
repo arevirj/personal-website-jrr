@@ -16,6 +16,18 @@ model Profile {
   // User name
   name String
 
+  //Age
+  age Int
+
+  //Location
+  location String
+
+  //Profession or University role
+  role String
+
+  //Profession or University location
+  place String
+  
   // User email
   email String
 
@@ -28,27 +40,26 @@ model Profile {
   // Aboutme section of portfolio
   aboutme String
 
-  posts Post[]
 }
 
 // Create a model for individual Blog posts
-model Post{
-  postid String @id @default(cuid())
+// model Post{
+//   postid String @id @default(cuid())
   
-  author String
+//   author String
 
-  post String
+//   post String
 
-  // Time posted
-  createdAt DateTime @default(now())
+//   // Time posted
+//   createdAt DateTime @default(now())
 
-  // Time updated/edited
-  updatedAt DateTime @updatedAt
+//   // Time updated/edited
+//   updatedAt DateTime @updatedAt
   
-  //Likes, having the ability to like a blog post
-  likes Int
+//   //Likes, having the ability to like a blog post
+//   likes Int
 
-  profile Profile @relation(fields: [profileid], references:[id])
+//   profile Profile @relation(fields: [profileid], references:[id])
 
-  profileid String
-}
+//   profileid String
+// }

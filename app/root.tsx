@@ -17,8 +17,10 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Outlet />
-        <LiveReload />
+        <div>
+          <Outlet />
+          <LiveReload />
+        </div>
       </body>
     </html>
   );
