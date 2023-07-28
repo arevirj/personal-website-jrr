@@ -11,7 +11,7 @@ generator client {
 model Profile {
 
   // Unique ID to avoid collision
-  id String @id @default(cuid())
+  id String @id @default(uuid())
 
   // User name
   name String
@@ -27,7 +27,7 @@ model Profile {
 
   //Profession or University location
   place String
-  
+
   // User email
   email String
 
@@ -40,26 +40,28 @@ model Profile {
   // Aboutme section of portfolio
   aboutme String
 
+  portfolio Portfolio[]
+
 }
 
-// Create a model for individual Blog posts
-// model Post{
-//   postid String @id @default(cuid())
+//Create a model for The portfolio
+
+model Portfolio{
+  portid String @id @default(cuid())
   
-//   author String
+  name String
 
-//   post String
+  image String
 
-//   // Time posted
-//   createdAt DateTime @default(now())
+  link String
 
-//   // Time updated/edited
-//   updatedAt DateTime @updatedAt
-  
-//   //Likes, having the ability to like a blog post
-//   likes Int
+  // Time posted
+  createdAt DateTime @default(now())
 
-//   profile Profile @relation(fields: [profileid], references:[id])
+  // Time updated/edited
+  updatedAt DateTime @updatedAt
 
-//   profileid String
-// }
+  profile Profile @relation(fields: [profileid], references:[id])
+
+  profileid String
+}

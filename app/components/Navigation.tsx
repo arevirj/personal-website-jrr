@@ -20,7 +20,7 @@ const Navigation = () => {
         </li>
         
         <li>
-          <NavLink to="/profiles" className={linkClasses}>
+          <NavLink to="/profile/yourprofileplaceholder" className={linkClasses}>
             Profile
           </NavLink>
         </li>
