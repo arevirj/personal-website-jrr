@@ -1,8 +1,7 @@
-import { Outlet, useLoaderData} from "@remix-run/react"
-import { CSSProperties } from "react";
+import { useLoaderData} from "@remix-run/react"
 import { db } from "~/db.server";
-import  type {LoaderArgs, LoaderFunction} from "@remix-run/node"
-import { Profile } from "@prisma/client";
+import  type {LoaderArgs} from "@remix-run/node"
+
 
 
 //Defining Loader Function for the database

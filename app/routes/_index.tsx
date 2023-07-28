@@ -1,8 +1,8 @@
-import type { LinksFunction, LoaderFunction } from "@remix-run/node";
-import { Link, Outlet, useLoaderData } from "@remix-run/react"
+import type { LinksFunction} from "@remix-run/node";
+import { Link, useLoaderData } from "@remix-run/react"
 import { db } from "~/db.server";
 import stylesURL from "~/tailwind.css"
-import Profile from '@prisma/client'
+
 export const links:LinksFunction = () => [
   {rel: "stylesheet", href: stylesURL}
 ]

@@ -1,4 +1,4 @@
-import {Link, NavLink, useLocation} from '@remix-run/react'
+import {NavLink, useLocation} from '@remix-run/react'
 // eslint-disable-next-line no-use-before-define
 import React from 'react'
 
@@ -26,10 +26,6 @@ const Navigation = () => {
       </>
     )
   }
-
-  const LogoLetter = ({letter}: {letter: string}) => (
-    <span className="letter inline-block top-0 relative">{letter}</span>
-  )
 
 
 
