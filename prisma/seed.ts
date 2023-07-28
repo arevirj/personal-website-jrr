@@ -1,12 +1,12 @@
 import { PrismaClient } from "@prisma/client";
-
+import {Profile } from "@prisma/client"
 const db = new PrismaClient();
 
 async function seed() {
-try{
+
  await Promise.all(
   getProfiles().map(async (profile) => {
-    const createdProfile =await db.profile.create({
+     await db.profile.create({
       data: {
         name: profile.name,
         age: profile.age,
@@ -22,10 +22,6 @@ try{
     });
   })
  )
-}
-catch(error) {
-  console.error('Error while seeding data:', error)
-}
 }
 
 seed();

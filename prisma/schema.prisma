@@ -41,7 +41,6 @@ model Profile {
   aboutme String
 
   portfolio Portfolio[]
-
 }
 
 //Create a model for The portfolio
