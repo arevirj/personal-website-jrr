@@ -28,7 +28,7 @@ export default function IndexRoute() {
 
     <body>
       <div>
-        <h1 className="text-center">Homepage placeholder</h1>
+        <h1 className="text-center text-6xl font-normal leading-normal mt-0 mb-2">Homepage</h1>
         <div className="flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-900 dark:text-gray-100 mx-auto">
 	<img src={allProfiles[0].image} />
 	<div className="space-y-4 text-center divide-y divide-gray-700">
