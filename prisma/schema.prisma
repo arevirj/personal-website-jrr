@@ -1,69 +1,34 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
 datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
 }
 
-generator client {
-  provider = "prisma-client-js"
-}
-
-// Creating a model for different users to have portfolios on the site
 model Profile {
-
-  // Unique ID to avoid collision
-  id String @id @default(uuid())
-
-  // User name
-  name String
-
-  //Age
-  age Int
-
-  //Location
-  location String
-
-  //Profession or University role
-  role String
-
-  //Profession or University location
-  place String
-
-  // User email
-  email String
-
-  // Time account was made
-  createdAt DateTime @default(now())
-
-  // Time account was updated
-  updatedAt DateTime @updatedAt
-
-  // Aboutme section of portfolio
-  aboutme String
-
-  //Profile image
-  image String
-
+  id        String      @id @default(uuid())
+  name      String
+  age       Int
+  location  String
+  role      String
+  place     String
+  email     String
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+  aboutme   String
+  image     String
   portfolio Portfolio[]
 }
 
-//Create a model for The portfolio
-
-model Portfolio{
-  portid String @id @default(cuid())
-  
-  name String
-
-  image String
-
-  link String
-
-  // Time posted
+model Portfolio {
+  portid    String   @id @default(cuid())
+  name      String
+  image     String
+  link      String
   createdAt DateTime @default(now())
-
-  // Time updated/edited
   updatedAt DateTime @updatedAt
-
-  profile Profile @relation(fields: [profileid], references:[id])
-
   profileid String
+  profile   Profile  @relation(fields: [profileid], references: [id])
 }
