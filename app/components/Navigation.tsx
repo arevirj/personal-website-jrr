@@ -15,34 +15,12 @@ const Navigation = () => {
       <>
         <li>
             <NavLink to="/" className={linkClasses}>
-                Home
+            <button
+    className="text-white py-2 px-4 uppercase rounded bg-blue-400 hover:bg-blue-500 shadow hover:shadow-lg font-medium transition transform hover:-translate-y-0.5"
+    >
+    Home
+    </button>
             </NavLink>
-        </li>
-        
-        <li>
-          <NavLink to="/profile/yourprofileplaceholder" className={linkClasses}>
-            Profile
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/projects" className={linkClasses}>
-            Projects
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/blog" className={linkClasses}>
-            Blog
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/contact" className={linkClasses}>
-            Contact
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/cv" className={linkClasses}>
-            CV
-          </NavLink>
         </li>
        
       </>

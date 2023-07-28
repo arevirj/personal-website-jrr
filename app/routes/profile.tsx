@@ -22,7 +22,6 @@ export async function loader() {
     }
     ));
     let data = { profiles };
-    console.log(data);
     return data;
 }
 export default function ProfilesRoute() {

@@ -40,6 +40,9 @@ model Profile {
   // Aboutme section of portfolio
   aboutme String
 
+  //Profile image
+  image String
+
   portfolio Portfolio[]
 }
 
