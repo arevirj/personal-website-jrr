@@ -22,10 +22,11 @@ export const loader = async ({params }: LoaderArgs) => {
         }
     }
     ));
-    if(!profiles) {
-        throw new Error("Profile not found");
+    if(!profiles){
+      throw new Error("Profiles not found")
     }
     let data = { profiles };
+
     return data;
 }
 
@@ -46,7 +47,7 @@ return(
         <div className="relative">
         <div className="w-48 h-48 bg-indigo-100 mx-auto rounded-full shadow-2xl absolute inset-x-0 top-0 -mt-24 flex items-center justify-center text-indigo-500">
              
-        <img className="rounded-full w-48 h-48" src={thisProfile.image} alt="image not found"></img>
+        <img className="rounded-full w-48 h-48" src={profileData.profiles.image} alt="image not found"></img>
         </div>
         </div>
 
